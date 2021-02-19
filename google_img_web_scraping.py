@@ -17,7 +17,9 @@ browser = webdriver.Firefox()
 # abrir la pagina
 browser.get(uri)
 # esperar hasta que se haya renderizado el elemento que nos interesa (timeout=30s)
-WebDriverWait(browser, 30).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "rg_i.Q4LuWd.tx8vtf")))
+
+#como tal el nombre de la imagen tiene que tener un espacio pero este se reemplaza con un punto
+WebDriverWait(browser, 30).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "rg_i.Q4LuWd.Q4LuWd")))
 # obtener el código HTML
 html = browser.page_source
 # cerrar el navegador
