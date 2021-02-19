@@ -47,8 +47,7 @@ for idx, each in enumerate(img_results):
 
     img = None
     if src.find("data:image") != -1:
-        img = base64.b64decode(src.replace("data:image/jpeg;base64,", ""))
-        img = base64.b64decode(src.replace("data:image/png;base64,", ""))
+        img = base64.b64decode(src.replace("data:image/jpeg;base64,",""))
     else:
         erantzuna = requests.get(src)
         img = erantzuna.content
